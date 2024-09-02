@@ -1,16 +1,13 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { CountContext } from "./context";
 
 
 function App() {
-  const [count, setCount] = useState(0);
   
   // wrap anyone that wants to use the teleported value inside a provider
   return (
     <div>
-      <CountContext.Provider value={count}>
-        <Count setCount={setCount} />
-      </CountContext.Provider>
+        <Count />
     </div>
   )
 }
